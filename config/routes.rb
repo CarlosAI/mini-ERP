@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :servicios
+  resources :almacens
+  #resources :servicios
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  #get 'servicios' to:'servicio#index'
+  #get 'Servicios' to:'servicio#index'
+  #get 'Almacenes' to:'almacen#index'
 
 end

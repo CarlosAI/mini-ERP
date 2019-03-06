@@ -1,0 +1,62 @@
+<%= form_with(model: almacen, local: true) do |form| %>
+  <% if almacen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(almacen.errors.count, "error") %> prohibited this almacen from being saved:</h2>
+
+      <ul>
+      <% almacen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_almacen %>
+    <%= form.number_field :id_almacen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre_almacen %>
+    <%= form.text_field :nombre_almacen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_postal %>
+    <%= form.number_field :codigo_postal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.text_field :ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cls %>
+    <%= form.text_field :cls %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_044947) do
+ActiveRecord::Schema.define(version: 2019_03_06_052640) do
+
+  create_table "almacens", force: :cascade do |t|
+    t.integer "id_almacen"
+    t.string "nombre_almacen"
+    t.text "descripcion"
+    t.string "direccion"
+    t.integer "codigo_postal"
+    t.string "ciudad"
+    t.string "estado"
+    t.string "pais"
+    t.string "cls"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "servicios", force: :cascade do |t|
     t.string "id_servicio"
