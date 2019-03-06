@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_pedido: 1
+  id_prod_serv: MyString
+  descripcion: MyText
+  precio_unitario: 1.5
+  cantidad: 1
+  descuento: 1
+
+two:
+  id_pedido: 1
+  id_prod_serv: MyString
+  descripcion: MyText
+  precio_unitario: 1.5
+  cantidad: 1
+  descuento: 1

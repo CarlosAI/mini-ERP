@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_movimiento: 1
+  fecha: 2019-03-06
+  etiqueta_producto: MyString
+  tipo_movimiento: MyString
+  cantidad: 1
+  id_almacen: MyString
+  id_producto: MyString
+
+two:
+  id_movimiento: 1
+  fecha: 2019-03-06
+  etiqueta_producto: MyString
+  tipo_movimiento: MyString
+  cantidad: 1
+  id_almacen: MyString
+  id_producto: MyString
