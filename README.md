@@ -5,7 +5,7 @@
 1. Crear el modelado de la base de datos (Campos, tablas, relaciones, etc.)
 2. Generar los Scaffolds de las tablas EXCEPTO ORDENES.
 
-# Equipo 2 (Charlie, Edgar, Ester, Aron).
+# Equipo 2 (Charlie, Edgar, Ester, aAron).
 
 1. De la tabla Ordenes generar una vista que muestre todas las ordenes en existencia.
 2 En este "listado" de ordenes se tiene que poder dar clic a una orden y esta tiene que llevar a una nueva pagina donde se muestren los detalles de esa orden en especifico que se encuentran en la Tabla Orden_detalles.
