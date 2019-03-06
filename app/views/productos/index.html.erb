@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Productos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id producto</th>
+      <th>Etiqueta producto</th>
+      <th>Estado ventas</th>
+      <th>Estado compras</th>
+      <th>Descripcion</th>
+      <th>Stock limite</th>
+      <th>Stock deseado</th>
+      <th>Naturaleza</th>
+      <th>Peso</th>
+      <th>Longitud</th>
+      <th>Largo</th>
+      <th>Alto</th>
+      <th>Superficie</th>
+      <th>Volumen</th>
+      <th>Precio venta</th>
+      <th>Precio venta minimo</th>
+      <th>Cantidad</th>
+      <th>Id almacen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr>
+        <td><%= producto.id_producto %></td>
+        <td><%= producto.etiqueta_producto %></td>
+        <td><%= producto.estado_ventas %></td>
+        <td><%= producto.estado_compras %></td>
+        <td><%= producto.descripcion %></td>
+        <td><%= producto.stock_limite %></td>
+        <td><%= producto.stock_deseado %></td>
+        <td><%= producto.naturaleza %></td>
+        <td><%= producto.peso %></td>
+        <td><%= producto.longitud %></td>
+        <td><%= producto.largo %></td>
+        <td><%= producto.alto %></td>
+        <td><%= producto.superficie %></td>
+        <td><%= producto.volumen %></td>
+        <td><%= producto.precio_venta %></td>
+        <td><%= producto.precio_venta_minimo %></td>
+        <td><%= producto.cantidad %></td>
+        <td><%= producto.id_almacen %></td>
+        <td><%= link_to 'Show', producto %></td>
+        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Producto', new_producto_path %>

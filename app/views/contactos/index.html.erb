@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contactos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id contacto</th>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Id tercero</th>
+      <th>Titulo</th>
+      <th>Puesto trabajo</th>
+      <th>Direccion</th>
+      <th>Codigo postal</th>
+      <th>Estado</th>
+      <th>Pais</th>
+      <th>Telefono trabajo</th>
+      <th>Telefono celular</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contactos.each do |contacto| %>
+      <tr>
+        <td><%= contacto.id_contacto %></td>
+        <td><%= contacto.apellido %></td>
+        <td><%= contacto.nombre %></td>
+        <td><%= contacto.id_tercero %></td>
+        <td><%= contacto.titulo %></td>
+        <td><%= contacto.puesto_trabajo %></td>
+        <td><%= contacto.direccion %></td>
+        <td><%= contacto.codigo_postal %></td>
+        <td><%= contacto.estado %></td>
+        <td><%= contacto.pais %></td>
+        <td><%= contacto.telefono_trabajo %></td>
+        <td><%= contacto.telefono_celular %></td>
+        <td><%= contacto.email %></td>
+        <td><%= link_to 'Show', contacto %></td>
+        <td><%= link_to 'Edit', edit_contacto_path(contacto) %></td>
+        <td><%= link_to 'Destroy', contacto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contacto', new_contacto_path %>

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id contacto:</strong>
+  <%= @contacto.id_contacto %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @contacto.apellido %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @contacto.nombre %>
+</p>
+
+<p>
+  <strong>Id tercero:</strong>
+  <%= @contacto.id_tercero %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @contacto.titulo %>
+</p>
+
+<p>
+  <strong>Puesto trabajo:</strong>
+  <%= @contacto.puesto_trabajo %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @contacto.direccion %>
+</p>
+
+<p>
+  <strong>Codigo postal:</strong>
+  <%= @contacto.codigo_postal %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @contacto.estado %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @contacto.pais %>
+</p>
+
+<p>
+  <strong>Telefono trabajo:</strong>
+  <%= @contacto.telefono_trabajo %>
+</p>
+
+<p>
+  <strong>Telefono celular:</strong>
+  <%= @contacto.telefono_celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contacto.email %>
+</p>
+
+<%= link_to 'Edit', edit_contacto_path(@contacto) %> |
+<%= link_to 'Back', contactos_path %>
