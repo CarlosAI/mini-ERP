@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_producto: MyString
+  etiqueta_producto: MyString
+  estado_ventas: MyString
+  estado_compras: MyString
+  descripcion: MyString
+  stock_limite: 1
+  stock_deseado: 1
+  naturaleza: MyString
+  peso: 1
+  longitud: 1
+  largo: 1
+  alto: 1
+  superficie: 1
+  volumen: 1
+  precio_venta: 1.5
+  precio_venta_minimo: 1.5
+  cantidad: 1
+  id_almacen: 1
+
+two:
+  id_producto: MyString
+  etiqueta_producto: MyString
+  estado_ventas: MyString
+  estado_compras: MyString
+  descripcion: MyString
+  stock_limite: 1
+  stock_deseado: 1
+  naturaleza: MyString
+  peso: 1
+  longitud: 1
+  largo: 1
+  alto: 1
+  superficie: 1
+  volumen: 1
+  precio_venta: 1.5
+  precio_venta_minimo: 1.5
+  cantidad: 1
+  id_almacen: 1

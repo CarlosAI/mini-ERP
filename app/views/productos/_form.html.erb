@@ -1,0 +1,107 @@
+<%= form_with(model: producto, local: true) do |form| %>
+  <% if producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_producto %>
+    <%= form.text_field :id_producto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :etiqueta_producto %>
+    <%= form.text_field :etiqueta_producto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_ventas %>
+    <%= form.text_field :estado_ventas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_compras %>
+    <%= form.text_field :estado_compras %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_limite %>
+    <%= form.number_field :stock_limite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock_deseado %>
+    <%= form.number_field :stock_deseado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :naturaleza %>
+    <%= form.text_field :naturaleza %>
+  </div>
+
+  <div class="field">
+    <%= form.label :peso %>
+    <%= form.number_field :peso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitud %>
+    <%= form.number_field :longitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :largo %>
+    <%= form.number_field :largo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alto %>
+    <%= form.number_field :alto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :superficie %>
+    <%= form.number_field :superficie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volumen %>
+    <%= form.number_field :volumen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio_venta %>
+    <%= form.text_field :precio_venta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio_venta_minimo %>
+    <%= form.text_field :precio_venta_minimo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cantidad %>
+    <%= form.number_field :cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_almacen %>
+    <%= form.number_field :id_almacen %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
