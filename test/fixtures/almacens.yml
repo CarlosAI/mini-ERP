@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_almacen: 1
+  nombre_almacen: MyString
+  descripcion: MyText
+  direccion: MyString
+  codigo_postal: 1
+  ciudad: MyString
+  estado: MyString
+  pais: MyString
+  cls: MyString
+
+two:
+  id_almacen: 1
+  nombre_almacen: MyString
+  descripcion: MyText
+  direccion: MyString
+  codigo_postal: 1
+  ciudad: MyString
+  estado: MyString
+  pais: MyString
+  cls: MyString

@@ -1,0 +1,57 @@
+<%= form_with(model: servicio, local: true) do |form| %>
+  <% if servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(servicio.errors.count, "error") %> prohibited this servicio from being saved:</h2>
+
+      <ul>
+      <% servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_servicio %>
+    <%= form.text_field :id_servicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :etiqueta_servicio %>
+    <%= form.text_field :etiqueta_servicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_venta %>
+    <%= form.text_field :estado_venta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_compra %>
+    <%= form.text_field :estado_compra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duracion %>
+    <%= form.number_field :duracion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio_venta %>
+    <%= form.text_field :precio_venta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio_venta_min %>
+    <%= form.text_field :precio_venta_min %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
