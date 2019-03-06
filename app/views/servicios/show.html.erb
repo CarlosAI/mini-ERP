@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id servicio:</strong>
+  <%= @servicio.id_servicio %>
+</p>
+
+<p>
+  <strong>Etiqueta servicio:</strong>
+  <%= @servicio.etiqueta_servicio %>
+</p>
+
+<p>
+  <strong>Estado venta:</strong>
+  <%= @servicio.estado_venta %>
+</p>
+
+<p>
+  <strong>Estado compra:</strong>
+  <%= @servicio.estado_compra %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @servicio.descripcion %>
+</p>
+
+<p>
+  <strong>Duracion:</strong>
+  <%= @servicio.duracion %>
+</p>
+
+<p>
+  <strong>Precio venta:</strong>
+  <%= @servicio.precio_venta %>
+</p>
+
+<p>
+  <strong>Precio venta min:</strong>
+  <%= @servicio.precio_venta_min %>
+</p>
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>

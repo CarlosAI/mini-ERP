@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_servicio: MyString
+  etiqueta_servicio: MyString
+  estado_venta: MyString
+  estado_compra: MyString
+  descripcion: MyText
+  duracion: 1
+  precio_venta: 1.5
+  precio_venta_min: 1.5
+
+two:
+  id_servicio: MyString
+  etiqueta_servicio: MyString
+  estado_venta: MyString
+  estado_compra: MyString
+  descripcion: MyText
+  duracion: 1
+  precio_venta: 1.5
+  precio_venta_min: 1.5
