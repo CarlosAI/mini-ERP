@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<div id="encabezado">
 <h1>Productos</h1>
+</div>
+<form action="/productos/new" method="get">
+<button>Nuevo producto</button>
+</form>
 
 <table>
-  <thead>
+  <thead id="encabezado_tabla">
     <tr>
       <th>Id producto</th>
       <th>Etiqueta producto</th>
@@ -48,9 +53,9 @@
         <td><%= producto.precio_venta_minimo %></td>
         <td><%= producto.cantidad %></td>
         <td><%= producto.id_almacen %></td>
-        <td><%= link_to 'Show', producto %></td>
-        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', producto %></td>
+        <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
+        <td><%= link_to 'Destruir', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -58,4 +63,16 @@
 
 <br>
 
-<%= link_to 'New Producto', new_producto_path %>
+
+
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+#encabezado_tabla{
+  background-color:lightgray;
+}
+</style>
