@@ -1,3 +1,8 @@
-<h1>ORdenes en existencia</h1>
+<h1>Ordenes en existencia</h1>
 
+<% @Ordenes.each do |ord| %> 
+    <p>ID %> : <%= ord.id %> </p>
+    <p>Nombre %> : <%= ord.nombre %> </p>
+    <p>Cliente %> : <%= ord.cliente %> </p>
+<% end %>
 
