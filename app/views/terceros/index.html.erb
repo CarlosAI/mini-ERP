@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Terceros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id tercero</th>
+      <th>Nombre tercero</th>
+      <th>Cliente</th>
+      <th>Proveedor</th>
+      <th>Direccion</th>
+      <th>Codigo postal</th>
+      <th>Ciudad</th>
+      <th>Estado</th>
+      <th>Pais</th>
+      <th>Email</th>
+      <th>Sitio web</th>
+      <th>Telefono</th>
+      <th>Rfc</th>
+      <th>Forma juridica</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terceros.each do |tercero| %>
+      <tr>
+        <td><%= tercero.id_tercero %></td>
+        <td><%= tercero.nombre_tercero %></td>
+        <td><%= tercero.cliente %></td>
+        <td><%= tercero.proveedor %></td>
+        <td><%= tercero.direccion %></td>
+        <td><%= tercero.codigo_postal %></td>
+        <td><%= tercero.ciudad %></td>
+        <td><%= tercero.estado %></td>
+        <td><%= tercero.pais %></td>
+        <td><%= tercero.email %></td>
+        <td><%= tercero.sitio_web %></td>
+        <td><%= tercero.telefono %></td>
+        <td><%= tercero.rfc %></td>
+        <td><%= tercero.forma_juridica %></td>
+        <td><%= link_to 'Show', tercero %></td>
+        <td><%= link_to 'Edit', edit_tercero_path(tercero) %></td>
+        <td><%= link_to 'Destroy', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tercero', new_tercero_path %>

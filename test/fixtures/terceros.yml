@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_tercero: MyString
+  nombre_tercero: MyString
+  cliente: MyString
+  proveedor: MyString
+  direccion: MyString
+  codigo_postal: MyString
+  ciudad: MyString
+  estado: MyString
+  pais: MyString
+  email: MyString
+  sitio_web: MyString
+  telefono: MyString
+  rfc: MyString
+  forma_juridica: MyString
+
+two:
+  id_tercero: MyString
+  nombre_tercero: MyString
+  cliente: MyString
+  proveedor: MyString
+  direccion: MyString
+  codigo_postal: MyString
+  ciudad: MyString
+  estado: MyString
+  pais: MyString
+  email: MyString
+  sitio_web: MyString
+  telefono: MyString
+  rfc: MyString
+  forma_juridica: MyString

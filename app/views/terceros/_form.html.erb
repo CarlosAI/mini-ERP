@@ -1,0 +1,87 @@
+<%= form_with(model: tercero, local: true) do |form| %>
+  <% if tercero.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tercero.errors.count, "error") %> prohibited this tercero from being saved:</h2>
+
+      <ul>
+      <% tercero.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_tercero %>
+    <%= form.text_field :id_tercero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre_tercero %>
+    <%= form.text_field :nombre_tercero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= form.text_field :cliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proveedor %>
+    <%= form.text_field :proveedor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo_postal %>
+    <%= form.text_field :codigo_postal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.text_field :ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sitio_web %>
+    <%= form.text_field :sitio_web %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rfc %>
+    <%= form.text_field :rfc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :forma_juridica %>
+    <%= form.text_field :forma_juridica %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
