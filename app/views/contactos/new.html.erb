@@ -1,5 +1,18 @@
-<h1>New Contacto</h1>
+<div id="encabezado">
+<h1>Nuevo Contacto</h1>
+</div>
 
 <%= render 'form', contacto: @contacto %>
 
-<%= link_to 'Back', contactos_path %>
+<form action="/contactos" method="get">
+<button>Atras</button>
+</form>
+
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+</style>

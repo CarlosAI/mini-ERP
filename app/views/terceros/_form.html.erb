@@ -21,14 +21,20 @@
     <%= form.text_field :nombre_tercero %>
   </div>
 
-  <div class="field">
+  <div class="contenedor">
     <%= form.label :cliente %>
-    <%= form.text_field :cliente %>
+    <select name="transporte" size="1" method:"get">
+    <option>Sì</option>
+    <option>No</option>
+    </select>
   </div>
 
-  <div class="field">
-    <%= form.label :proveedor %>
-    <%= form.text_field :proveedor %>
+  <div class="contenedor">
+    <%= form.label :proveedor, :id=>"et"%>
+    <select name="transporte" size="1" method:"get">
+    <option>Sì</option>
+    <option>No</option>
+    </select>
   </div>
 
   <div class="field">
@@ -85,3 +91,16 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<style>
+#et{
+  color: black;
+  
+}
+.contenedor {
+display: flex;
+#justify-content: center;
+align-items: center;
+}
+
+</style>

@@ -1,6 +1,16 @@
-<h1>Editing Contacto</h1>
+<div id="encabezado">
+<h1>Editar Contacto</h1>
+</div>
 
 <%= render 'form', contacto: @contacto %>
 
-<%= link_to 'Show', @contacto %> |
-<%= link_to 'Back', contactos_path %>
+<%= button_to 'Ver', @contacto, method: :get %> 
+<%= button_to 'Atras', contactos_path, method: :get %>
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+</style>

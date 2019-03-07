@@ -90,5 +90,13 @@
   <%= @producto.id_almacen %>
 </p>
 
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
-<%= link_to 'Back', productos_path %>
+<%= button_to 'Editar', edit_producto_path(@producto), method: :get %> 
+<%= button_to 'Atras', productos_path, method: :get %>
+<style>
+h1{
+  color: black;
+}
+strong{
+  background-color:lightblue;
+}
+</style>
