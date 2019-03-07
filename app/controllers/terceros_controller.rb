@@ -1,6 +1,18 @@
 class TercerosController < ApplicationController
   before_action :set_tercero, only: [:show, :edit, :update, :destroy]
 
+
+  #Metodo de ordenes
+  def ordenes
+    puts "Metodo ordenes"
+    puts params
+    el_id = params["format"]
+    puts "EL ID ES"
+    puts el_id
+  end
+
+
+
   # GET /terceros
   # GET /terceros.json
   def index
@@ -19,6 +31,7 @@ class TercerosController < ApplicationController
 
   # GET /terceros/1/edit
   def edit
+    puts params
   end
 
   # POST /terceros

@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_03_06_052640) do
+ActiveRecord::Schema.define(version: 2019_03_06_182524) do
 
   create_table "almacens", force: :cascade do |t|
     t.integer "id_almacen"
@@ -23,8 +22,9 @@ ActiveRecord::Schema.define(version: 2019_03_06_052640) do
     t.string "estado"
     t.string "pais"
     t.string "cls"
-
-ActiveRecord::Schema.define(version: 2019_03_06_182524) do
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contactos", force: :cascade do |t|
     t.string "id_contacto"
@@ -44,17 +44,6 @@ ActiveRecord::Schema.define(version: 2019_03_06_182524) do
     t.datetime "updated_at", null: false
   end
 
-
-  create_table "servicios", force: :cascade do |t|
-    t.string "id_servicio"
-    t.string "etiqueta_servicio"
-    t.string "estado_venta"
-    t.string "estado_compra"
-    t.text "descripcion"
-    t.integer "duracion"
-    t.float "precio_venta"
-    t.float "precio_venta_min"
-    
   create_table "productos", force: :cascade do |t|
     t.string "id_producto"
     t.string "etiqueta_producto"
@@ -74,6 +63,19 @@ ActiveRecord::Schema.define(version: 2019_03_06_182524) do
     t.float "precio_venta_minimo"
     t.integer "cantidad"
     t.integer "id_almacen"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "servicios", force: :cascade do |t|
+    t.string "id_servicio"
+    t.string "etiqueta_servicio"
+    t.string "estado_venta"
+    t.string "estado_compra"
+    t.text "descripcion"
+    t.integer "duracion"
+    t.float "precio_venta"
+    t.float "precio_venta_min"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
