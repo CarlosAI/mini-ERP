@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
 
+<div id="encabezado">
 <h1>Terceros</h1>
+</div>
+
+<form action="/terceros/new" method="get">
+<button>Nuevo tercero</button>
+</form>
 
 <table>
-  <thead>
+<div>
+  <thead id="encabezado_tabla">
     <tr>
       <th>Id tercero</th>
       <th>Nombre tercero</th>
@@ -22,6 +28,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+  </div>
 
   <tbody>
     <% @terceros.each do |tercero| %>
@@ -40,9 +47,9 @@
         <td><%= tercero.telefono %></td>
         <td><%= tercero.rfc %></td>
         <td><%= tercero.forma_juridica %></td>
-        <td><%= link_to 'Show', tercero %></td>
-        <td><%= link_to 'Edit', edit_tercero_path(tercero) %></td>
-        <td><%= link_to 'Destroy', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', tercero %></td>
+        <td><%= link_to 'Editar', edit_tercero_path(tercero) %></td>
+        <td><%= link_to 'Destruir', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,4 +57,14 @@
 
 <br>
 
-<%= link_to 'New Tercero', new_tercero_path %>
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+#encabezado_tabla{
+  background-color:lightgray;
+}
+</style>
