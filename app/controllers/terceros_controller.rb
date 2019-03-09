@@ -4,11 +4,12 @@ class TercerosController < ApplicationController
 
   #Metodo de ordenes
   def ordenes
-    puts "Metodo ordenes"
-    puts params
-    el_id = params["format"]
-    puts "EL ID ES"
-    puts el_id
+    id = params["format"]
+    @ordenes_de_cliente = Pedido.where("id_tercero"=>id)
+    tercero = Tercero.where("id_tercero"=>id)
+    tercero.each do |i|
+      @nombre_tercero = i.nombre_tercero
+    end
   end
 
 
