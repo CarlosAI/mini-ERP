@@ -47,9 +47,10 @@
         <td><%= tercero.telefono %></td>
         <td><%= tercero.rfc %></td>
         <td><%= tercero.forma_juridica %></td>
-        <td><%= link_to 'Ver', tercero %></td>
-        <td><%= link_to 'Editar', edit_tercero_path(tercero) %></td>
-        <td><%= link_to 'Destruir', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', tercero %></td>
+        <td><%= link_to 'Edit', edit_tercero_path(tercero) %></td>
+        <td><%= link_to 'Destroy', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver ordenes', ordenes_terceros_path(tercero.id_tercero) %></td>
       </tr>
     <% end %>
   </tbody>
