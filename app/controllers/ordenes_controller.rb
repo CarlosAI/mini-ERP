@@ -1,9 +1,7 @@
-class OrdenesController < ApplicationController
+class PedidosController < ApplicationController #OrdenesController?
   def index
 
-  	@ordenes = Ordenes.all
-  	#id
-  	#nombre
-  	#cliente
+  	@pedidos = Pedidos.all
+  
   end
 end
