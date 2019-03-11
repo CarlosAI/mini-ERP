@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'ordenes/index'
+  get 'pedidos', to: 'pedidos#index'
   resources :almacens
   resources :servicios
 

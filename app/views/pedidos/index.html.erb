@@ -1,0 +1,10 @@
+<h1>Pedidos en existencia</h1>
+
+<% @pedidos.each do |ped| %> 
+    
+    <p>Tercero %> : <%= ped.id_tercero %> </p>
+    <p>Fecha %> : <%= ped.fecha %> </p>
+    <p>Forma de pago %> : <%= ped.forma_pago %> </p>
+    <p>Fecha de entrega %> : <%= ped.fecha_entrega %> </p>
+    
+<% end %>
