@@ -4,6 +4,7 @@ class TercerosController < ApplicationController
 
   #Metodo de ordenes
   def ordenes
+    puts params
     id = params["format"]
     @ordenes_de_cliente = Pedido.where("id_tercero"=>id)
     tercero = Tercero.where("id_tercero"=>id)
@@ -23,6 +24,12 @@ class TercerosController < ApplicationController
     pedido.metodo_envio = params["metodo"]
     pedido.condicion_pago = params["condicion"]
     pedido.save
+  end
+
+  def detalles
+    puts params
+    pedido = params["format"]
+    @detalle = Pedido.where("id"=>pedido)
   end
 
   def ordenes_clientes

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :contactos
   resources :terceros do
     collection {get :ordenes}
+    collection {get :detalles}
   end
 
   get 'ordenes', to:'terceros#ordenes'
