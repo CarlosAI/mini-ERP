@@ -4,7 +4,9 @@ class PedidosController < ApplicationController
 		@pedidos = Pedido.all  
 		#Creación de pdf
 		@id = params[:id]
-		@pedido= Pedido.find(@id)
+		if @id
+			@pedido= Pedido.find(@id)
+		end
 		respond_to do |format|
 			format.html
 			format.pdf do

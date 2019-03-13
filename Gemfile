@@ -37,6 +37,7 @@ gem 'axlsx_rails'
 gem 'roo'
 gem 'rubyzip', '= 1.0.0'
 gem 'prawn'
+gem 'prawn-table', '~> 0.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
