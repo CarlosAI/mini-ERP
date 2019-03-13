@@ -1,10 +1,12 @@
 <h1>Pedidos en existencia</h1>
 
 <% @pedidos.each do |ped| %> 
-    
-    <p>Tercero %> : <%= ped.id_tercero %> </p>
-    <p>Fecha %> : <%= ped.fecha %> </p>
-    <p>Forma de pago %> : <%= ped.forma_pago %> </p>
-    <p>Fecha de entrega %> : <%= ped.fecha_entrega %> </p>
-    
+    <p>Id pedido : <%=ped.id%></p>
+    <p>Tipo de pedido : <%= ped.tipo_pedido%></p>
+    <p>Forma de pago : <%= ped.forma_pago %> </p>
+    <p>Validez : <%= ped.validez %> </p>
+    <p>Condición de pago : <%= ped.condicion_pago %> </p>
+    <p>Método de envío : <%= ped.metodo_envio %> </p>
+    <p>Fecha de entrega : <%= ped.fecha_entrega %> </p>
+    <button id="<%= ped.id %>"><%= link_to "Imprimir", pedidos_path(:id => ped.id, format: "pdf")%></button>
 <% end %>
