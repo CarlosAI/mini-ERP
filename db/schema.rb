@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_03_06_191949) do
+=======
+
+ActiveRecord::Schema.define(version: 2019_03_06_191949) do
+
+>>>>>>> 85322d13a8f02cf9ec426b746275a515a69f87fb
 
   create_table "almacens", force: :cascade do |t|
     t.integer "id_almacen"
@@ -44,6 +50,10 @@ ActiveRecord::Schema.define(version: 2019_03_06_191949) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85322d13a8f02cf9ec426b746275a515a69f87fb
   create_table "pedidos", force: :cascade do |t|
     t.string "id_pedido"
     t.string "tipo_pedido"
@@ -58,6 +68,10 @@ ActiveRecord::Schema.define(version: 2019_03_06_191949) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85322d13a8f02cf9ec426b746275a515a69f87fb
   create_table "productos", force: :cascade do |t|
     t.string "id_producto"
     t.string "etiqueta_producto"

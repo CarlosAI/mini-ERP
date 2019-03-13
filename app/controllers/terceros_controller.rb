@@ -1,6 +1,19 @@
 class TercerosController < ApplicationController
   before_action :set_tercero, only: [:show, :edit, :update, :destroy]
 
+
+  #Metodo de ordenes
+  def ordenes
+    id = params["format"]
+    @ordenes_de_cliente = Pedido.where("id_tercero"=>id)
+    tercero = Tercero.where("id_tercero"=>id)
+    tercero.each do |i|
+      @nombre_tercero = i.nombre_tercero
+    end
+  end
+
+
+
   # GET /terceros
   # GET /terceros.json
   def index
@@ -19,6 +32,7 @@ class TercerosController < ApplicationController
 
   # GET /terceros/1/edit
   def edit
+    puts params
   end
 
   # POST /terceros
