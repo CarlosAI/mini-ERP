@@ -12,7 +12,22 @@ class TercerosController < ApplicationController
     end
   end
 
+  def registrar_nuevo
+    puts params
+    pedido = Pedido.new
+    pedido.id_tercero = params["Cliente"]
+    pedido.tipo_pedido = "Pedido a cliente"
+    pedido.fecha = params["Fecha-p"]
+    pedido.fecha_entrega = params["fecha-e"]
+    pedido.forma_pago = params["pago"]
+    pedido.metodo_envio = params["metodo"]
+    pedido.condicion_pago = params["condicion"]
+    pedido.save
+  end
 
+  def ordenes_clientes
+    @tercer = Tercero.all
+  end
 
   # GET /terceros
   # GET /terceros.json
