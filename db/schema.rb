@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_182524) do
+
+ActiveRecord::Schema.define(version: 2019_03_06_191949) do
+
 
   create_table "almacens", force: :cascade do |t|
     t.integer "id_almacen"
@@ -43,6 +45,22 @@ ActiveRecord::Schema.define(version: 2019_03_06_182524) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+
+  create_table "pedidos", force: :cascade do |t|
+    t.string "id_pedido"
+    t.string "tipo_pedido"
+    t.date "fecha"
+    t.integer "validez"
+    t.string "condicion_pago"
+    t.string "forma_pago"
+    t.string "metodo_envio"
+    t.date "fecha_entrega"
+    t.string "id_tercero"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 
   create_table "productos", force: :cascade do |t|
     t.string "id_producto"

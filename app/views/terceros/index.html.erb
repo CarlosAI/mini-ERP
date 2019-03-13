@@ -1,17 +1,19 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <div id="encabezado">
 <h1>Terceros</h1>
 </div>
 
 <form action="/terceros/new" method="get">
-<button>Nuevo tercero</button>
+<button type="button" class="btn btn-light btn-lg">Nuevo tercero</button>
 </form>
 
-<table>
+
+<table class="table table-hover table-sm">
 <div>
-  <thead id="encabezado_tabla">
+  <thead id="encabezado_tabla" class="thead-dark">
     <tr>
-      <th>Id tercero</th>
+      <th >Id tercero</th>
       <th>Nombre tercero</th>
       <th>Cliente</th>
       <th>Proveedor</th>
@@ -25,7 +27,7 @@
       <th>Telefono</th>
       <th>Rfc</th>
       <th>Forma juridica</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
   </div>
@@ -47,24 +49,11 @@
         <td><%= tercero.telefono %></td>
         <td><%= tercero.rfc %></td>
         <td><%= tercero.forma_juridica %></td>
-        <td><%= link_to 'Ver', tercero %></td>
-        <td><%= link_to 'Editar', edit_tercero_path(tercero) %></td>
-        <td><%= link_to 'Destruir', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', tercero %></td>
+        <td><%= button_to 'Edit', edit_tercero_path(tercero), :method => :get %></td>
+        <td><%= button_to 'Destroy', tercero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Ver ordenes', ordenes_terceros_path(tercero.id_tercero), :method => :get %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<style>
-h1{
-  color: black;
-}
-#encabezado{
-  background-color:lightblue;
-}
-#encabezado_tabla{
-  background-color:lightgray;
-}
-</style>
