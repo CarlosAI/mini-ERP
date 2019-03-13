@@ -22,7 +22,7 @@ class PedidosController < ApplicationController
 
 	def detalles
 		pedido = params["pedido_id"]
-		@detalle = Pedido.find(pedido)
+		@detalle = Pedido.where("id"=>pedido)
 	end
 end
 

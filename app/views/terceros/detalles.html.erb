@@ -1,0 +1,13 @@
+<h1>Detalles de pedido</h1>
+<% @detalle.each do |pedido| %> 
+    
+    <p> id Pedido: <%= pedido.id %> </p>
+    <p> Tipo de pedido: <%= pedido.tipo_pedido %> </p>
+    <p> Fecha: <%= pedido.fecha %> </p>
+    <p> Validez: <%= pedido.validez %> </p>
+    <p> Condicion de pago: <%= pedido.condicion_pago %> </p>
+    <p> Forma de pago: <%= pedido.forma_pago %> </p>
+    <p> Fecha de entrega: <%= pedido.fecha_entrega %> </p>
+    <p> Cliente: <%= pedido.id_tercero %> </p>
+    
+<% end %>
