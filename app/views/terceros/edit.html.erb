@@ -1,6 +1,17 @@
-<h1>Editing Tercero</h1>
+<div id="encabezado">
+<h1>Editar Tercero</h1>
+</div>
 
 <%= render 'form', tercero: @tercero %>
 
-<%= link_to 'Show', @tercero %> |
-<%= link_to 'Back', terceros_path %>
+<%= button_to 'Ver', @tercero, method: :get  %> 
+<%= button_to 'Atras', terceros_path, method: :get %>
+
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+</style>

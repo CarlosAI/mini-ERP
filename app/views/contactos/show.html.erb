@@ -65,5 +65,14 @@
   <%= @contacto.email %>
 </p>
 
-<%= link_to 'Edit', edit_contacto_path(@contacto) %> |
-<%= link_to 'Back', contactos_path %>
+<%= button_to 'Editar', edit_contacto_path(@contacto), method: :get %> 
+<%= button_to 'Atras', contactos_path, method: :get  %>
+
+<style>
+h1{
+  color: black;
+}
+strong{
+  background-color:lightblue;
+}
+</style>

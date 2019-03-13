@@ -1,5 +1,15 @@
-<h1>New Tercero</h1>
+<div id="encabezado">
+<h1>Nuevo Tercero</h1>
+</div>
 
 <%= render 'form', tercero: @tercero %>
 
-<%= link_to 'Back', terceros_path %>
+<%= button_to 'Atras', terceros_path, method: :get %>
+<style>
+h1{
+  color: black;
+}
+#encabezado{
+  background-color:lightblue;
+}
+</style>

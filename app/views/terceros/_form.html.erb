@@ -21,14 +21,14 @@
     <%= form.text_field :nombre_tercero %>
   </div>
 
-  <div class="field">
+  <div class="contenedor">
     <%= form.label :cliente %>
-    <%= form.text_field :cliente %>
+    <%= form.select :cliente, ['Sí', 'No'] %>
   </div>
 
-  <div class="field">
-    <%= form.label :proveedor %>
-    <%= form.text_field :proveedor %>
+  <div class="contenedor">
+    <%= form.label :proveedor, :id=>"et"%>
+    <%= form.select :proveedor, ['Sí', 'No'] %>
   </div>
 
   <div class="field">
@@ -85,3 +85,16 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<style>
+#et{
+  color: black;
+  
+}
+.contenedor {
+display: flex;
+#justify-content: center;
+align-items: center;
+}
+
+</style>
