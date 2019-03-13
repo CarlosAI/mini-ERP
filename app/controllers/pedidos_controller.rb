@@ -19,7 +19,10 @@ class PedidosController < ApplicationController
 		
 	end
 
-	def pdf
-		
+
+	def detalles
+		pedido = params["pedido_id"]
+		@detalle = Pedido.find(pedido)
 	end
 end
+
