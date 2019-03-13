@@ -8,65 +8,66 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-<form>
-<div class="container" style="padding-right: 50%">
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Referencia</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Cliente</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>aqui mostramos los clientes de la base pinwy</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-    <div class="form-group row">
-      <label>Fecha de pedido</label>
-      <div class="col-10">
-        <input class="form-control" type="date" value="2019-03-10" id="example-date-input">
+<%= form_tag("/registrar_nuevo",method:"post") do %>
+  <div class="container" style="padding-right: 50%">
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Cliente</label>
+      <select class="form-control" name="Cliente" id="exampleFormControlSelect1">
+        <% @tercer.each do |f| %>
+          <option value="<%=f.id%>"><%= f.nombre_tercero%></option>
+        <% end %>
+      </select>
+    </div>
+      <div class="form-group row">
+        <label>Fecha de pedido</label>
+        <div class="col-10">
+          <input class="form-control" type="date" value="2019-03-10" name="Fecha-p" id="example-date-input">
+        </div>
       </div>
-    </div>
-    <div class="form-group row">
-      <label>Fecha prevista de entrega</label>
-      <div class="col-10">
-        <input class="form-control" type="date" value="2019-03-10" id="example-date-input">
+      <div class="form-group row">
+        <label>Fecha prevista de entrega</label>
+        <div class="col-10">
+          <input class="form-control" type="date" name="fecha-e" value="2019-03-10" id="example-date-input">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Condiciones de pago</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Metodo de envio</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Forma de pago</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Condiciones de pago</label>
+        <select class="form-control" name="condicion" id="exampleFormControlSelect1">
+          <option></option>
+          <option>A la orden</option>
+          <option>A la entrega</option>
+          <option>30 días</option>
+          <option>60 días</option>
+          <option>50/50</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Metodo de envio</label>
+        <select class="form-control" name="metodo" id="exampleFormControlSelect1">
+          <option></option>
+          <option>Terrestre</option>
+          <option>Aéreo</option>
+          <option>Maritimo</option>
+          <option>Teletransportación</option>
+          <option>A pie</option>
+          <option>CORREEEEEOOOOO</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Forma de pago</label>
+        <select class="form-control" name="pago" id="exampleFormControlSelect1">
+          <option></option>
+          <option>Tarjeta</option>
+          <option>Efectivo</option>
+          <option>Tranferencia</option>
+          <option>Cuerpo</option>
+          <option>Ninguno</option>
+        </select>
+      </div>
+    <div>
+      <button type="submit" name="Agregar_orden">Agregar</button>
     </div>
   </div>
-</form>
+<% end %>
 </body>
 </html>
