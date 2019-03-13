@@ -23,18 +23,12 @@
 
   <div class="contenedor">
     <%= form.label :cliente %>
-    <select name="transporte" size="1" method:"get">
-    <option>Sì</option>
-    <option>No</option>
-    </select>
+    <%= form.select :cliente, ['Sí', 'No'] %>
   </div>
 
   <div class="contenedor">
     <%= form.label :proveedor, :id=>"et"%>
-    <select name="transporte" size="1" method:"get">
-    <option>Sì</option>
-    <option>No</option>
-    </select>
+    <%= form.select :proveedor, ['Sí', 'No'] %>
   </div>
 
   <div class="field">
