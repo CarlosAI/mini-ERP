@@ -4,10 +4,25 @@
     <title>ERP</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="application.css">
   </head>
 
   <body>
+  	<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/terceros">Terceros</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/pedidos">Pedidos</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/ordenes_clientes">Órdenes</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/almacens">Almacén</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/servicios">Servicios</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/productos">Productos</a></li>
+        <li style="float: left;"><a style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;" href="/contactos">Contactos</a></li>
+    </ul>
     <%= yield %>
   </body>
+
+  <style type="text/css">
+    li a:hover {
+      background-color: #111;
+    }
+  </style>
 </html>
